@@ -1,0 +1,173 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Write your model definitions here
+ */
+
+namespace aws
+
+
+participant User identified by rdsuid {
+  o String rdsuid
+  o Identifiers IdentifiersValues optional
+  o UserCreds UserCredsValues optional
+  o UserDetails UserDetailsValues optional
+  o UserAddress UserAddressValues optional
+  o UserId UserIdValues optional
+  o UserSocial UserSocialValues optional
+  o AddendumData AddendumDataValues optional
+}
+
+concept Identifiers {
+  o String UserUID optional
+  o String ubc optional
+  o String sfuid optional
+  o String qruid optional
+}
+transaction UpdateIdentifiers {
+  o String trdsuid
+  o Identifiers tIdentifiers
+}
+concept UserCreds {
+  o String UEmail optional
+  o String Password optional
+  o String UMobile optional
+  o String UMobileCC optional
+  o DateTime UJoinDate optional
+}
+transaction UpdateUserCreds {
+  o String trdsuid
+  o UserCreds tUserCreds
+}
+concept UserDetails{
+  o String UTitle optional
+  o String UFName optional
+  o String UMiddle optional
+  o String ULName optional
+}
+transaction UpdateUserDetails {
+  o String trdsuid
+  o UserDetails tUserDetails
+}
+concept UserAddress {
+  o String UStreet optional
+  o String UCity optional
+  o String UCounty optional
+  o Integer ZipCode optional
+  o String UCountry optional
+}
+transaction UpdateUserAddress {
+  o String trdsuid
+  o UserAddress tUserAddress
+}
+concept UserId {
+  o String UPassportExp optional
+  o String UPassportCC optional
+  o String USocialSecNo optional
+}
+transaction UpdateUserId {
+  o String trdsuid
+  o UserId tUserId
+}
+concept UserSocial {
+  o String UFacebook optional
+  o String UTwitter optional
+  o String UInstagram optional
+  o String UYoutube optional
+  o String ULinkedIn optional
+}
+transaction UpdateUserSocial {
+  o String trdsuid
+  o UserSocial tUserSocial
+}
+concept AddendumData {
+  o String UData28 optional
+  o String UData29 optional
+  o String UData30 optional
+  o String UData31 optional
+  o String UData32 optional
+  o String UData33 optional
+  o String UData34 optional
+  o String UData35 optional
+  o String UData36 optional
+  o String UData37 optional
+  o String UData38 optional
+  o String UData39 optional
+  o String UData40 optional
+  o String UData41 optional
+  o String UData42 optional
+  o String UData43 optional
+  o String UData44 optional
+  o String UData45 optional
+  o String UData46 optional
+  o String UData47 optional
+  o String UData48 optional
+  o String UData49 optional
+  o String UData50 optional
+  o String UData51 optional
+  o String UData52 optional
+  o String UData53 optional
+  o String UData54 optional
+  o String UData55 optional
+  o String UData56 optional
+  o String UData57 optional
+  o String UData58 optional
+  o String UData59 optional
+  o String UData60 optional
+  o String UData61 optional
+  o String UData62 optional
+  o String UData63 optional
+  o String UData64 optional
+  o String UData65 optional
+  o String UData66 optional
+  o String UData67 optional
+  o String UData68 optional
+  o String UData69 optional
+  o String UData70 optional
+  o String UData71 optional
+  o String UData72 optional
+  o String UData73 optional
+  o String UData74 optional
+  o String UData75 optional
+  o String UData76 optional
+  o String UData77 optional
+  o String UData78 optional
+  o String UData79 optional
+  o String UData80 optional
+  o String UData81 optional
+  o String UData82 optional
+  o String UData83 optional
+  o String UData84 optional
+  o String UData85 optional
+  o String UData86 optional
+  o String UData87 optional
+  o String UData88 optional
+  o String UData89 optional
+  o String UData90 optional
+  o String UData91 optional
+  o String UData92 optional
+  o String UData93 optional
+  o String UData94 optional
+  o String UData95 optional
+  o String UData96 optional
+  o String UData97 optional
+  o String UData98 optional
+  o String UData99 optional
+  o String UData100 optional
+}
+transaction UpdateAddendumData {
+  o String trdsuid
+  o AddendumData tAddendumData
+}
